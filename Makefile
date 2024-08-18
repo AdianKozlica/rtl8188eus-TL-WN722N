@@ -2061,12 +2061,10 @@ else
 
 export CONFIG_RTL8188EU = m
 
-pre-build:
-	./generate-linux-version-code.py
-
-all: pre-build modules
+all: modules
 
 modules:
+	./generate-linux-version-code.py
 	$(MAKE) ARCH=$(ARCH) CROSS_COMPILE=$(CROSS_COMPILE) -C $(KSRC) M=$(shell pwd)  modules
 
 strip:
