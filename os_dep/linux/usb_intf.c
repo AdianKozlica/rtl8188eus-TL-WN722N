@@ -19,6 +19,7 @@
 #include <hal_data.h>
 
 #include <platform_ops.h>
+#include "custom_linux_version.h";
 
 #ifndef CONFIG_USB_HCI
 #error "CONFIG_USB_HCI shall be on!\n"
