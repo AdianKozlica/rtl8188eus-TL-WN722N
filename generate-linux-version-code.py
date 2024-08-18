@@ -3,8 +3,8 @@ from pathlib import Path
 
 import os
 
-ROOT_PATH = Path(__file__).root
-OUT_PATH = Path(ROOT_PATH) / "os_dep/linux/custom_linux_version.h"
+ROOT_PATH = Path(__file__).parent
+OUT_PATH = ROOT_PATH / "os_dep/linux/custom_linux_version.h"
 
 def get_linux_version_code():
     kernel_version = os.uname().release
@@ -19,6 +19,6 @@ def get_linux_version_code():
 if __name__ == '__main__':
     linux_version_code = get_linux_version_code()
     constant = f"#define LINUX_VERSION_CODE {linux_version_code}"
-
+    
     with open(OUT_PATH, 'w') as file:
         file.write(constant)
