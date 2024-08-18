@@ -4,7 +4,7 @@ from pathlib import Path
 import os
 
 ROOT_PATH = Path(__file__).root
-OUT_PATH = ROOT_PATH / "os_dep/linux/custom_linux_version.h"
+OUT_PATH = Path(ROOT_PATH) / "os_dep/linux/custom_linux_version.h"
 
 def get_linux_version_code():
     kernel_version = os.uname().release
