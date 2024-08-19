@@ -43,6 +43,12 @@ rmmod r8188eu rtl8xxxu 8188eu
 modprobe 8188eu
 ```
 
+# DKMS Guide
+```
+cp -r rtl8188eus-TL-WN722N/ /usr/src/rtl8188eus-TL-WN722N
+sudo ./dkms-install.sh
+```
+
 # MONITOR MODE howto
 Use these steps to enter monitor mode.
 ```
